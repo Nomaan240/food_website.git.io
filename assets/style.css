@@ -1,0 +1,184 @@
+@import url(./variable.css);
+
+/************************ body margin , padding & outline remove ************************/
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    text-decoration: none;
+    border: none;
+}
+
+body{
+    background: var(--body);
+}
+
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+}
+
+/************************ selection pshudu element ************************/
+*::selection{
+    background: var(--selection);
+    color: var(--selection-font-color);
+}
+
+/************************ header area start ************************/
+.header{
+    width: 100%;
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--selection-font-color);
+    padding: 2rem 9%;
+    box-sizing: border-box;
+    box-shadow: var(--box-shadow);
+}
+
+.logo{
+    font:normal bolder 2.5rem/0 var(--nunito);
+    color: var(--color);
+}
+
+.logo .font{
+    padding-right: .5rem;
+    color:var(--selection );
+}
+
+.nav a{
+    font-size: 1.4rem;
+    font-family: var(--nunito);
+    font-weight: 400;
+    color: var(--color);
+}
+
+.nav a + a{
+    margin-left: 2rem;
+}
+
+.nav a:hover{
+    color: var(--selection);
+    transition: color border .1s;
+}
+
+/************************ home div start ************************/
+section .home{
+    padding: 2rem 9%;
+    box-sizing: border-box;
+}
+
+.home{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10rem;
+    min-height: 100vh;
+    align-items: center;
+    background: url(img/home-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home .content{
+    flex: 1 1 40rem;
+    padding-top: 6.5rem;
+}
+
+.home .image{
+    flex: 1 1 40rem;
+}
+
+
+.home .image img{
+    width: 90%;
+    padding: 1rem;
+    animation-name: slow-up-down;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+
+@keyframes  slow-up-down{
+    0% , 100%{
+        transform: translateY(0rem);
+    }
+    50%{
+        transform: translateY(3rem);
+        
+    }
+}
+
+.image .drop-shadow{
+    position: relative;
+    top: 65px;
+    border-radius:50%;
+    box-shadow: 0 0rem 100rem  rgba(0,0,0,1);
+    filter: blur(15px);
+    width: 80%;
+    height: 10px;
+    background:rgba(0,0,0,1);
+    margin: auto;
+    animation-name: drop-shadow;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+
+}
+
+@keyframes  drop-shadow{
+    0% , 100%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;     
+    }
+}
+
+.home .content h3{
+    font-size: 5rem;
+    font-family: var(--nunito);
+    color: #333;
+}
+
+.home .content p{
+    font-size: 1.7rem;
+    font-family: var(--nunito);
+    color: #666;
+    padding: 1rem 0;
+    text-align: justify;
+}
+
+.home .content p::first-letter{
+    color:var(--selection);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.btn{
+    display: inline-block;
+    padding: .4rem 2rem;
+    border: .2rem solid var(--selection);
+    color: var(--selection);
+    cursor: pointer;
+    font-size: 1.7rem;
+    border-radius: 1rem;
+    font-family: var(--nunito);
+    margin-top: 1rem;
+    box-shadow: inset 0 0 0 0 var(--selection);
+
+}
+
+.btn:hover{
+    transition:.5s;
+    box-shadow: 0px 0px 5px 0px var(--selection);
+}
+
+/************************ home div end ************************/
+
+
