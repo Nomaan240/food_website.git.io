@@ -337,3 +337,102 @@ section .popular{
 /************************ popular section end ************************/
 
 
+
+/************************ steps section start ************************/
+.step-div{
+    padding: 2rem;
+}
+
+section .steps{
+    padding: 1rem .1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+
+}
+
+section .steps .box{
+    text-align: center;
+    padding: 1rem;
+    width: 22%;
+}
+
+section .steps .box img{
+    text-align: center;
+    border-radius: 50%;
+    border:1rem solid #fff;
+    box-shadow: 0 .5rem  1rem rgba(0, 0 , 0 , .1);
+}
+
+section .steps .box h3{
+    padding: .2rem;
+    color: #333;
+    font-size: 2rem;
+    font-family: var(--nunito);
+}
+
+/************************ steps section end ************************/
+
+
+/************************ gallery section start ************************/
+section .gellery-div{
+    padding: 2rem 9%;
+    box-sizing: border-box;
+}
+.gellery-div .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.gellery-div .box-container .box{
+    height: 25rem;
+    flex: 1 1 25rem;
+    border:1rem solid #fff;
+    box-shadow: 0 .5rem 1rem rgba(0, 0 , 0 , .1);
+    position: relative;
+    overflow: hidden;
+}
+
+.gellery-div .box-container .box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gellery-div .box-container .box .content{
+    position: absolute;
+    top: -100%; left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgb(255, 255, 255 , .8);
+    padding: 2rem;
+    box-sizing: border-box;
+    padding-top: 5rem;
+    text-align: center;
+}
+
+.gellery-div .box-container .box .content h3{
+    color: #333;
+    font-size: 2.5rem;
+    font-family: var(--nunito);
+}
+
+.gellery-div .box-container .box .content p{
+    color: #333;
+    font-size: 1.1rem;
+    font-family: var(--nunito);
+}
+
+.gellery-div .box-container .box:hover .content{
+    top: 0%;
+    transition: .5s linear;
+}
+
+
+
+
+/************************ gallery section end ************************/
+
+
