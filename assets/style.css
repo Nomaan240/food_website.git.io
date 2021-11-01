@@ -27,7 +27,7 @@ html{
 /************************ header area start ************************/
 .header{
     width: 100%;
-    position: fixed;
+    position:absolute;
     top: 0; left: 0;
     z-index: 1000;
     display: flex;
@@ -565,15 +565,53 @@ section .order .row  form .btn:hover{
 
 /************************ order section end ************************/
 
-footer .footer{
-    padding: 2rem 9%;
-}
+
 
 
 /************************ footer section start ************************/
 
+footer .footer{
+    padding: 2rem 9%;
+}
 
+footer .footer{
+    background: #000;
+    text-align: center;
+}
+
+footer .footer .share{
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+footer .footer .credit{
+    padding: 2.5rem 1rem;
+    color: #fff;
+    font-family: var(--nunito);
+    font-weight: normal;
+    font-size: 2rem;
+}
+
+footer .footer .credit span{
+    color: var(--selection);
+}
 
 /************************ footer section end ************************/
+
+#scroll-top{
+    position: fixed;
+    top: -120%;
+    right: 2rem ;
+    padding: .5rem 1.5rem;
+    font-size: 4rem;
+    background: var(--selection);
+    color: #fff;
+    border-radius: .5rem;
+
+    visibility: hidden;
+    transition: 1s linear;
+}
 
 
